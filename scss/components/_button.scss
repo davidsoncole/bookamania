@@ -1,0 +1,197 @@
+
+.solid_light {
+	color: #000;
+	background-color: #fff;
+	font-size: 1.2rem;
+	font-weight: bold;
+	margin-right: 1rem;
+
+	&:hover {
+		color: #fff;
+		background-color: #ED1F43;
+	}
+}
+
+.solid_light2 {
+	color: #fff;
+	background-color: #ED1F43;
+	font-size: 1.2rem;
+	font-weight: bold;
+	margin-right: 1rem;
+
+	&:hover {
+		color: #fff;
+		background-color: #ED1F43;
+	}
+}
+
+.outline_light {
+	color: #fff;
+	font-size: 1.2rem;
+	font-weight: bold;
+	border: 2px solid #fff;
+
+	&:hover {
+		color: #000;
+		border: 2px solid #fff;
+		background-color: #fff;
+	}
+}
+
+.outline_dark {
+	color: #000;
+	font-size: 1.6rem;
+	font-weight: bold;
+	border: 3px solid #000;
+	padding-left: 3rem;
+	padding-right: 3rem;
+
+	&:hover {
+		color: #ED1F43;
+		border: 3px solid #ED1F43;
+	}
+}
+
+.outline_lighter {
+	color: #fff;
+	font-size: 1.6rem;
+	font-weight: bold;
+	border: 3px solid #fff;
+	padding-left: 3rem;
+	padding-right: 3rem;
+
+	&:hover {
+		color: #fff;
+		border: 3px solid #fff;
+	}
+}
+
+#catalogue {
+	.solid_btn {
+		color: #fff;
+		background-color: #ED1F43;
+		font-size: 1.2rem;
+		font-weight: bold;
+	}
+}
+
+#book_store {
+	.solid_btn {
+		color: #fff;
+		background-color: #ED1F43;
+		font-size: 1.2rem;
+		font-weight: bold;
+	}
+}
+
+.btn_overlay {
+	width: 70%;
+	height: 100%;
+	display: inline-block;
+	padding: 0;
+	z-index: 1;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.btn_overlay2 {
+	width: 100%;
+	height: 100%;
+	display: inline-block;
+	padding: 0;
+	z-index: 1;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.modal_btn-outline {
+	color: #ED1F43;
+	font-size: 1rem;
+	font-weight: bold;
+	border: 1.5px solid #ED1F43;
+	padding: .6rem 1rem;
+	margin-right: 1rem;
+
+	&:hover {
+		color: #fff;
+		border: 1px solid #ED1F43;
+		background-color: #ED1F43;
+		padding: .6rem 1rem;
+	}
+}
+
+.modal_btn-solid {
+	color: #fff;
+	font-size: 1rem;
+	font-weight: bold;
+	background-color: #ED1F43;
+	padding: .6rem 1rem;
+	margin-right: 1rem;
+
+	&:hover {
+		color: #fff;
+		background-color: #CF0F30;
+		padding: .6rem 1rem;
+	}
+}
+
+.search_btn-outline {
+	color: #ED1F43;
+	font-size: 1rem;
+	font-weight: bold;
+	border: 1.5px solid #ED1F43;
+	padding: .14rem 1rem;
+
+	&:hover {
+		color: #fff;
+		border: 1px solid #ED1F43;
+		background-color: #ED1F43;
+		border: 1.5px solid #ED1F43;
+		padding: .14rem 1rem;
+	}
+
+	ion-icon {
+		margin-top: .4rem;
+	}
+}
+
+.all_books {
+	.card_btn-solid {
+		color: #fff;
+		font-size: 1rem;
+		font-weight: bold;
+		background-color: #ED1F43;
+		padding: .6rem 1rem;
+
+		&:hover {
+			color: #fff;
+			background-color: #CF0F30;
+			padding: .6rem 1rem;
+		}
+	}
+}
+
+.solid_btn-block {
+	color: #fff;
+	background-color: #ED1F43;
+	font-size: 1.2rem;
+	font-weight: bold;
+	width: 100%;
+}
+
+.media_btn {
+	font-size: 1rem;
+	font-weight: bold;
+	margin-right: 1rem;
+	margin-top: 1rem;
+	border: solid .1rem #777272;
+	color: #777272;
+
+	&:hover {
+		color: #ED1F43;
+		border: solid .1rem #ED1F43;
+	}
+}
+

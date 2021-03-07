@@ -1,0 +1,133 @@
+
+.navbar {
+	font-size: 1.3rem;
+	font-weight: 500;
+	background-color: #fff;
+	padding: 2rem 5rem;
+
+	.navbar-brand img {
+		width: 20rem;
+	}
+
+	.nav-link {
+		margin-left: 1.5rem;
+		margin-right: 1.5rem;
+	}
+
+	.cart {
+		background-color: #ED1F43;
+		border-radius: .3rem;
+
+		.nav-link {
+			color: #fff;
+		}
+	}
+
+}
+
+.no-navshad {}
+
+.navshad {
+	box-shadow: 0px 1px 10px #999;
+}
+
+.navbar-full .dropdown-menu {
+    position: absolute !important;
+    top: 97%;
+    left: 0 !important;
+    right: 0 !important;
+    border: 0;
+    border-radius: 0;
+    padding: 2rem 5rem;
+    transition: 5s all;
+
+    .row {
+    	border-top: 1px solid #eee;
+    	padding: 3rem 0;
+    }
+
+    h5 {
+    	font-size: 1.8rem;
+    	font-weight: 600;
+    	margin-bottom: 2rem;
+    }
+
+    h6 {
+    	font-size: 1.3rem;
+    	font-weight: 600;
+    	text-transform: uppercase;
+    }
+
+    span {
+    	font-size: 1.3rem;
+    }
+}
+
+.dropdown-link {
+	color: #000;
+
+	&:hover {
+		color: #ED1F43;
+	}
+}
+
+.navbar-full .dropdown, .navbar-full .navbar-nav .nav-item.dropdown {
+    position: static !important;
+}
+
+
+.navbar-before .navbar-nav .dropdown-menu:before {
+    content: '';
+    background: #f00;
+    display: block;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+		z-index: 10;
+}
+
+/* mobile navbar sidebar under lg breakpoint */
+@media (max-width: 992px) {
+
+    .navbar {
+        padding: 2rem 2rem;
+    }
+    
+    .navbar-collapse.collapsing .navbar-nav {
+        display: block;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: -45%;
+        transition: all 0.2s ease;
+    }
+
+    .navbar-collapse.show .navbar-nav {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        flex-direction: column;
+        height: auto;
+        width: 45%;
+        transition: left 0.35s ease;
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+        background-color: #fff;
+        padding-top: 5rem;
+        z-index: 1,
+    }
+
+    #check {
+        .cart {
+            background-color: #ED1F43;
+            border-radius: 0;
+
+            .nav-link {
+                color: #fff;
+            }
+        }
+    }
+}

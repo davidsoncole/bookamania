@@ -1,0 +1,552 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <!--Costum CSS-->
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+
+    <title>Bookamania</title>
+  </head>
+  <body id="book_store">
+
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="Index.html">
+            <img src="assets/logo.png">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">CATALOGUE</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Kidclub.html">KIDS CLUB</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Events.html">EVENTS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Blog.html">BLOG</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Signin.html">SIGNIN</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-2">
+                <div id="side_bar">
+                    <h5 class="sidebar_title">Catalogue</h5>
+                    <ul class="list-unstyled catalogue_list">
+                        <li class="topic">British</li>
+                        <li>EYF (Preschool)</li>
+                        <li>Key stage 1</li>
+                        <li>Key stage 2</li>
+                        <li>Key stage 3</li>
+                        <li>Key stage 4</li>
+                        <li>A levels</li>
+                    </ul>
+                    <ul class="list-unstyled catalogue_list">
+                        <li class="topic">American</li>
+                        <li>kindergarten</li>
+                        <li>Elementery</li>
+                        <li>Middle school</li>
+                        <li>High school</li>
+                        <li>SAT</li>
+                    </ul>
+                    <ul class="list-unstyled catalogue_list">
+                        <li class="topic">Literature books</li>
+                        <li>Classics</li>
+                        <li>Fictions</li>
+                        <li>Non fictions</li>
+                        <li>Reading list</li>
+                    </ul>
+                    <ul class="list-unstyled catalogue_list">
+                        <li class="topic">Reference</li>
+                        <li>General library development</li>
+                        <li>Tertiary</li>
+                        <li>Christian books</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-10">
+                <div class="row all_books">
+                    <div class="col-lg-12">
+                        <button id="show_btn" onclick="openNav()" class="btn solid_btn d-block d-sm-block d-md-block d-lg-none">Show catalogue</button>
+                        <button id="hide_btn" onclick="closeNav()" class="btn solid_btn d-block d-sm-block d-md-block d-lg-none">Hide catalogue</button>
+                    </div>
+                    <br><br>
+                    <div class="col-lg-4">
+                        <form class="row search_form">
+                            <span class="col-10">
+                                <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+                            </span>
+                            <button class="btn btn-outline-default search_btn-outline" type="submit">
+                                <ion-icon name="search"></ion-icon>
+                            </button>
+                            
+                        </form>
+                    </div>
+
+                    <div class="col-lg-8"></div>
+                    
+                    <div class="col-lg-12">
+                        <ul class="nav nav-pills menu" id="pills-tab" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" id="all-books-tab" data-toggle="pill" href="#all-books" role="tab" aria-controls="all-books" aria-selected="true">All Books</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="newly-arrived-tab" data-toggle="pill" href="#newly-arrived" role="tab" aria-controls="newly-arrived" aria-selected="false">Newly-arrived</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="peoples-favourite-tab" data-toggle="pill" href="#peoples-favourite" role="tab" aria-controls="peoples-favourite" aria-selected="false">Peoples Favourite</a>
+                            </li>
+                        </ul>
+
+                        <div class="tab-content" id="pills-tabContent">
+                          <div class="tab-pane fade show active" id="all-books" role="tabpanel" aria-labelledby="all-books-tab">
+
+                            <div class="row">
+                                <div class="col-6 col-lg-4 col-xl-3">
+
+                                    <div class="card mb-3">
+                                      <div class="row no-gutters">
+                                        <div class="col-sm-4 col-md-4">
+                                            <button class="btn btn-default btn_overlay2" data-toggle="modal" data-target="#bookmodal"></button>
+                                            <img src="assets/book_1.jpg" class="card-img" alt="...">
+                                        </div>
+                                        <div class="col-sm-8 col-md-8 d-none d-sm-block d-md-block d-lg-block">
+                                          <div class="card-body">
+                                            <h5 class="card-title">Card title</h5>
+                                            <span class="card-text">This is a wider card below as a natural to additional content.</span>
+                                            <div class="ratebox">
+                                              <img class="rate_img" src="assets/stars.png">
+                                              <span class="caption rates"> 5 / 5</span>
+                                            </div>
+                                            <button class="btn btn-default card_btn-solid">ADD TO CART</button>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+
+                                </div>
+                                <div class="col-6 col-lg-4 col-xl-3">
+
+                                    <div class="card mb-3">
+                                      <div class="row no-gutters">
+                                        <div class="col-sm-4 col-md-4">
+                                            <button class="btn btn-default btn_overlay2" data-toggle="modal" data-target="#bookmodal"></button>
+                                            <img src="assets/book_1.jpg" class="card-img" alt="...">
+                                        </div>
+                                        <div class="col-sm-8 col-md-8 d-none d-sm-block d-md-block d-lg-block">
+                                          <div class="card-body">
+                                            <h5 class="card-title">Card title</h5>
+                                            <span class="card-text">This is a wider card below as a natural to additional content.</span>
+                                            <div class="ratebox">
+                                              <img class="rate_img" src="assets/stars.png">
+                                              <span class="caption rates"> 5 / 5</span>
+                                            </div>
+                                            <button class="btn btn-default card_btn-solid">ADD TO CART</button>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    
+                                </div>
+                                <div class="col-6 col-lg-4 col-xl-3">
+
+                                    <div class="card mb-3">
+                                      <div class="row no-gutters">
+                                        <div class="col-sm-4 col-md-4">
+                                            <button class="btn btn-default btn_overlay2" data-toggle="modal" data-target="#bookmodal"></button>
+                                            <img src="assets/book_1.jpg" class="card-img" alt="...">
+                                        </div>
+                                        <div class="col-sm-8 col-md-8 d-none d-sm-block d-md-block d-lg-block">
+                                          <div class="card-body">
+                                            <h5 class="card-title">Card title</h5>
+                                            <span class="card-text">This is a wider card below as a natural to additional content.</span>
+                                            <div class="ratebox">
+                                              <img class="rate_img" src="assets/stars.png">
+                                              <span class="caption rates"> 5 / 5</span>
+                                            </div>
+                                            <button class="btn btn-default card_btn-solid">ADD TO CART</button>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    
+                                </div>
+                                <div class="col-6 col-lg-4 col-xl-3">
+
+                                    <div class="card mb-3">
+                                      <div class="row no-gutters">
+                                        <div class="col-sm-4 col-md-4">
+                                            <button class="btn btn-default btn_overlay2" data-toggle="modal" data-target="#bookmodal"></button>
+                                            <img src="assets/book_1.jpg" class="card-img" alt="...">
+                                        </div>
+                                        <div class="col-sm-8 col-md-8 d-none d-sm-block d-md-block d-lg-block">
+                                          <div class="card-body">
+                                            <h5 class="card-title">Card title</h5>
+                                            <span class="card-text">This is a wider card below as a natural to additional content.</span>
+                                            <div class="ratebox">
+                                              <img class="rate_img" src="assets/stars.png">
+                                              <span class="caption rates"> 5 / 5</span>
+                                            </div>
+                                            <button class="btn btn-default card_btn-solid">ADD TO CART</button>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-12 p-3">
+                                    <ul class="pagination">
+                                        <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                        <li class="page-item"><a class="page-link " href="#">2</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                        <li class="page-item disabled"><a class="page-link" href="#">Next</a></li>
+                                    </ul>
+                                </div>
+                                
+                            </div>
+                              
+                          </div>
+                          <div class="tab-pane fade" id="newly-arrived" role="tabpanel" aria-labelledby="newly-arrived-tab">
+
+                            <div class="row">
+                                <div class="col-6 col-lg-4 col-xl-3">
+
+                                    <div class="card mb-3">
+                                      <div class="row no-gutters">
+                                        <div class="col-sm-4 col-md-4">
+                                            <button class="btn btn-default btn_overlay2" data-toggle="modal" data-target="#bookmodal"></button>
+                                            <img src="assets/book_1.jpg" class="card-img" alt="...">
+                                        </div>
+                                        <div class="col-sm-8 col-md-8 d-none d-sm-block d-md-block d-lg-block">
+                                          <div class="card-body">
+                                            <h5 class="card-title">Card title</h5>
+                                            <span class="card-text">This is a wider card below as a natural to additional content.</span>
+                                            <div class="ratebox">
+                                              <img class="rate_img" src="assets/stars.png">
+                                              <span class="caption rates"> 5 / 5</span>
+                                            </div>
+                                            <button class="btn btn-default card_btn-solid">ADD TO CART</button>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+
+                                </div>
+                                <div class="col-6 col-lg-4 col-xl-3">
+
+                                    <div class="card mb-3">
+                                      <div class="row no-gutters">
+                                        <div class="col-sm-4 col-md-4">
+                                            <button class="btn btn-default btn_overlay2" data-toggle="modal" data-target="#bookmodal"></button>
+                                            <img src="assets/book_1.jpg" class="card-img" alt="...">
+                                        </div>
+                                        <div class="col-sm-8 col-md-8 d-none d-sm-block d-md-block d-lg-block">
+                                          <div class="card-body">
+                                            <h5 class="card-title">Card title</h5>
+                                            <span class="card-text">This is a wider card below as a natural to additional content.</span>
+                                            <div class="ratebox">
+                                              <img class="rate_img" src="assets/stars.png">
+                                              <span class="caption rates"> 5 / 5</span>
+                                            </div>
+                                            <button class="btn btn-default card_btn-solid">ADD TO CART</button>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    
+                                </div>
+                                <div class="col-6 col-lg-4 col-xl-3">
+
+                                    <div class="card mb-3">
+                                      <div class="row no-gutters">
+                                        <div class="col-sm-4 col-md-4">
+                                            <button class="btn btn-default btn_overlay2" data-toggle="modal" data-target="#bookmodal"></button>
+                                            <img src="assets/book_1.jpg" class="card-img" alt="...">
+                                        </div>
+                                        <div class="col-sm-8 col-md-8 d-none d-sm-block d-md-block d-lg-block">
+                                          <div class="card-body">
+                                            <h5 class="card-title">Card title</h5>
+                                            <span class="card-text">This is a wider card below as a natural to additional content.</span>
+                                            <div class="ratebox">
+                                              <img class="rate_img" src="assets/stars.png">
+                                              <span class="caption rates"> 5 / 5</span>
+                                            </div>
+                                            <button class="btn btn-default card_btn-solid">ADD TO CART</button>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    
+                                </div>
+                                <div class="col-6 col-lg-4 col-xl-3">
+
+                                    <div class="card mb-3">
+                                      <div class="row no-gutters">
+                                        <div class="col-sm-4 col-md-4">
+                                            <button class="btn btn-default btn_overlay2" data-toggle="modal" data-target="#bookmodal"></button>
+                                            <img src="assets/book_1.jpg" class="card-img" alt="...">
+                                        </div>
+                                        <div class="col-sm-8 col-md-8 d-none d-sm-block d-md-block d-lg-block">
+                                          <div class="card-body">
+                                            <h5 class="card-title">Card title</h5>
+                                            <span class="card-text">This is a wider card below as a natural to additional content.</span>
+                                            <div class="ratebox">
+                                              <img class="rate_img" src="assets/stars.png">
+                                              <span class="caption rates"> 5 / 5</span>
+                                            </div>
+                                            <button class="btn btn-default card_btn-solid">ADD TO CART</button>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-12 p-3">
+                                    <ul class="pagination">
+                                        <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                        <li class="page-item"><a class="page-link " href="#">2</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                        <li class="page-item disabled"><a class="page-link" href="#">Next</a></li>
+                                    </ul>
+                                </div>
+                                
+                            </div>
+                              
+                          </div>
+                          <div class="tab-pane fade" id="peoples-favourite" role="tabpanel" aria-labelledby="peoples-favourite-tab">
+
+                            <div class="row">
+                                <div class="col-6 col-lg-4 col-xl-3">
+
+                                    <div class="card mb-3">
+                                      <div class="row no-gutters">
+                                        <div class="col-sm-4 col-md-4">
+                                            <button class="btn btn-default btn_overlay2" data-toggle="modal" data-target="#bookmodal"></button>
+                                            <img src="assets/book_1.jpg" class="card-img" alt="...">
+                                        </div>
+                                        <div class="col-sm-8 col-md-8 d-none d-sm-block d-md-block d-lg-block">
+                                          <div class="card-body">
+                                            <h5 class="card-title">Card title</h5>
+                                            <span class="card-text">This is a wider card below as a natural to additional content.</span>
+                                            <div class="ratebox">
+                                              <img class="rate_img" src="assets/stars.png">
+                                              <span class="caption rates"> 5 / 5</span>
+                                            </div>
+                                            <button class="btn btn-default card_btn-solid">ADD TO CART</button>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+
+                                </div>
+                                <div class="col-6 col-lg-4 col-xl-3">
+
+                                    <div class="card mb-3">
+                                      <div class="row no-gutters">
+                                        <div class="col-sm-4 col-md-4">
+                                            <button class="btn btn-default btn_overlay2" data-toggle="modal" data-target="#bookmodal"></button>
+                                            <img src="assets/book_1.jpg" class="card-img" alt="...">
+                                        </div>
+                                        <div class="col-sm-8 col-md-8 d-none d-sm-block d-md-block d-lg-block">
+                                          <div class="card-body">
+                                            <h5 class="card-title">Card title</h5>
+                                            <span class="card-text">This is a wider card below as a natural to additional content.</span>
+                                            <div class="ratebox">
+                                              <img class="rate_img" src="assets/stars.png">
+                                              <span class="caption rates"> 5 / 5</span>
+                                            </div>
+                                            <button class="btn btn-default card_btn-solid">ADD TO CART</button>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    
+                                </div>
+                                <div class="col-6 col-lg-4 col-xl-3">
+
+                                    <div class="card mb-3">
+                                      <div class="row no-gutters">
+                                        <div class="col-sm-4 col-md-4">
+                                            <button class="btn btn-default btn_overlay2" data-toggle="modal" data-target="#bookmodal"></button>
+                                            <img src="assets/book_1.jpg" class="card-img" alt="...">
+                                        </div>
+                                        <div class="col-sm-8 col-md-8 d-none d-sm-block d-md-block d-lg-block">
+                                          <div class="card-body">
+                                            <h5 class="card-title">Card title</h5>
+                                            <span class="card-text">This is a wider card below as a natural to additional content.</span>
+                                            <div class="ratebox">
+                                              <img class="rate_img" src="assets/stars.png">
+                                              <span class="caption rates"> 5 / 5</span>
+                                            </div>
+                                            <button class="btn btn-default card_btn-solid">ADD TO CART</button>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    
+                                </div>
+                                <div class="col-6 col-lg-4 col-xl-3">
+
+                                    <div class="card mb-3">
+                                      <div class="row no-gutters">
+                                        <div class="col-sm-4 col-md-4">
+                                            <button class="btn btn-default btn_overlay2" data-toggle="modal" data-target="#bookmodal"></button>
+                                            <img src="assets/book_1.jpg" class="card-img" alt="...">
+                                        </div>
+                                        <div class="col-sm-8 col-md-8 d-none d-sm-block d-md-block d-lg-block">
+                                          <div class="card-body">
+                                            <h5 class="card-title">Card title</h5>
+                                            <span class="card-text">This is a wider card below as a natural to additional content.</span>
+                                            <div class="ratebox">
+                                              <img class="rate_img" src="assets/stars.png">
+                                              <span class="caption rates"> 5 / 5</span>
+                                            </div>
+                                            <button class="btn btn-default card_btn-solid">ADD TO CART</button>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-12 p-3">
+                                    <ul class="pagination">
+                                        <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                        <li class="page-item"><a class="page-link " href="#">2</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                        <li class="page-item disabled"><a class="page-link" href="#">Next</a></li>
+                                    </ul>
+                                </div>
+                                
+                            </div>
+
+                            </div>
+                              
+                          </div>
+                        </div>
+
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--Display modal-->
+    <div class="modal fade" id="bookmodal" tabindex="-1" role="dialog" aria-labelledby="bookModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="bookTitle">Book details</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-lg-3 bookimg">
+                <img src="assets/book_1.jpg">
+              </div>
+              <div class="col-lg-6 text_body">
+                <div class="ratebox">
+                  <img class="rate_img" src="assets/stars.png">
+                  <span class="caption rates"> 5 / 5</span>
+                </div>
+                
+                <h2 class="book_title">Prisoner of Azkaban</h2>
+                <p class="book_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sit amet lacus odio. Phasellus auctor risus libero, at sagittis sapien sollicitudin eget. Aenean fringilla venenatis velit, a ultrices lorem viverra vel.</p>
+                <button class="btn btn btn-default modal_btn-outline"> ADD TO CART</button>
+                <a href="Checkout.html" class="btn btn btn-default modal_btn-solid"> BUY NOW</a>
+
+              </div>
+              <div class="col-lg-3">
+                <div class="highlite">
+                  <h6 class="header-topic">More Details</h6>
+                  <div class="row">
+                    <div class="col-lg-6">
+                      <span class="caption">Paperback</span>
+                      <p><span>528 </span>
+                      <span>pages</span></p>
+                    </div>
+                    <div class="col-lg-6">
+                      <span class="caption">Language</span>
+                      <p><span>English</span></p>
+                    </div>
+                    <div class="col-lg-12">
+                      <span class="caption">Publisher</span>
+                      <p><span>Davidson, 2020</span></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="highlite2">
+                  <h6 class="header-topic">Author</h6>
+                  <div class="row">
+                    <div class="col-lg-12">
+                      <span class="caption">Brooklyn, New York</span>
+                      <p><span>Glory Edin</span></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+    <!--ionicons-->
+    <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
+
+    <!--custom-->
+    <script>
+        function openNav() {
+          document.getElementById("side_bar").style.width = "20rem";
+          document.getElementById("side_bar").style.right = "0";
+          document.getElementById("show_btn").style.visibility = "hidden";
+          document.getElementById("hide_btn").style.visibility = "visible";
+        }
+
+        function closeNav() {
+          document.getElementById("side_bar").style.width = "0";
+          document.getElementById("side_bar").style.right = "-20%";
+          document.getElementById("hide_btn").style.visibility = "hidden";
+          document.getElementById("show_btn").style.visibility = "visible";
+        }
+    </script>
+
+  </body>
+</html>
