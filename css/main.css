@@ -768,6 +768,9 @@ body {
   #book_store #side_bar .topic {
     font-weight: 500;
   }
+  #book_store .cat_box {
+    height: 6rem;
+  }
   #book_store #show_btn {
     visibility: visible;
     position: absolute;
