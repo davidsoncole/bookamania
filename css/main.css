@@ -770,20 +770,19 @@ body {
   }
   #book_store .cat_box {
     height: 6rem;
+    z-index: -1;
   }
   #book_store #show_btn {
     visibility: visible;
     position: absolute;
     top: 40;
     left: 40;
-    z-index: 1;
   }
   #book_store #hide_btn {
     visibility: hidden;
     position: absolute;
     top: 40;
     left: 40;
-    z-index: 1;
   }
 }
 #home {
