@@ -776,12 +776,14 @@ body {
     position: absolute;
     top: 40;
     left: 40;
+    z-index: 1;
   }
   #book_store #hide_btn {
     visibility: hidden;
     position: absolute;
     top: 40;
     left: 40;
+    z-index: 1;
   }
 }
 #home {
